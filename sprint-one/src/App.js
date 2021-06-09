@@ -1,10 +1,15 @@
+import Nav from './components/Nav/Nav';
 import './App.scss';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>hahaha</h1>
-    </div>
+    <>
+      <header className="header">
+        <Nav/>
+      </header>
+    </>
   );
 }
 

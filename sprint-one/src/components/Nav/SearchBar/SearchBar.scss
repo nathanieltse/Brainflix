@@ -1,0 +1,47 @@
+@use '../../../partials/colors' as *;
+@use '../../../partials/variables' as *;
+@use '../../../partials/typographys' as *;
+@use '../../../partials/spacings' as *;
+@use '../../../partials/mixins' as *;
+
+.search-form {
+    position: relative; 
+    @include flex-row;
+    flex-wrap: wrap;
+
+    &__input{
+        @include formfield;
+        margin-bottom: $min-space ;
+        
+        @include tablet {
+            margin: 0;
+        }
+    }
+
+    &__submit{
+        @include button;
+        margin: 0 $small-space $small-space 0;
+        width: auto;
+        flex-grow: 1;
+
+        @include tablet {
+            flex-grow: 0;
+            margin:0 $regular-space;
+        }
+    }
+
+    &__avatar-wrapper {
+        @include avatar;
+        margin-left: auto;
+        overflow: hidden;
+
+        @include tablet {
+            margin: 0;
+        }
+    }
+
+    &__avatar {
+        height: 100%;
+    }
+
+}
