@@ -57,6 +57,7 @@
     font-size: $mobile-label-font;
     font-weight: $weight-demi;
     line-height: $mobile-label-line-height;
+    text-align: center;
     height: 3rem;
     width: 100%;
     border-radius: 0.25rem;
@@ -72,7 +73,7 @@
         font-size: $normal-label-font;
         line-height: $normal-label-line-height;
         width: 6rem;
-        padding:0;
+        padding:$min-space;
     }
 } 
 
