@@ -1,15 +1,8 @@
-@use '../../../partials/colors' as *;
-@use '../../../partials/variables' as *;
-@use '../../../partials/typographys' as *;
-@use '../../../partials/spacings' as *;
-@use '../../../partials/mixins' as *;
-
-.comment{
-
-    &__title {
-        margin-bottom: $medium-space;
-    }
-}
+@use '../../partials/colors' as *;
+@use '../../partials/variables' as *;
+@use '../../partials/typographys' as *;
+@use '../../partials/spacings' as *;
+@use '../../partials/mixins' as *;
 
 .comment-form{
     @include flex-row;

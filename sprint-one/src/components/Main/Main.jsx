@@ -1,6 +1,6 @@
-import VideoPlayer from './VideoPlayer/VideoPlayer'
-import VideoDetail from './VideoDetail/VideoDetail'
-import Comment from './Comment/Comment'
+import VideoPlayer from '../VideoPlayer/VideoPlayer'
+import VideoDetail from '../VideoDetail/VideoDetail'
+import Comment from '../Comment/Comment'
 
 import {Component} from 'react'
 import './Main.scss'

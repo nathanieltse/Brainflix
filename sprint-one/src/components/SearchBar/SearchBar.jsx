@@ -1,6 +1,6 @@
-import searchIcon from "../../../assets/icons/Icon-search.svg"
-import uploadIcon from "../../../assets/icons/Icon-upload.svg"
-import profileImage from '../../../assets/images/Mohan-muruge.jpg'
+import searchIcon from "../../assets/icons/Icon-search.svg"
+import uploadIcon from "../../assets/icons/Icon-upload.svg"
+import profileImage from '../../assets/images/Mohan-muruge.jpg'
 
 import './SearchBar.scss'
 

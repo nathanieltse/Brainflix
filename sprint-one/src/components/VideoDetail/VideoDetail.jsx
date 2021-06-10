@@ -1,5 +1,5 @@
-import ViewIcon from '../../../assets/icons/Icon-views.svg'
-import LikeIcon from '../../../assets/icons/Icon-likes.svg'
+import ViewIcon from '../../assets/icons/Icon-views.svg'
+import LikeIcon from '../../assets/icons/Icon-likes.svg'
 
 import './VideoDetail.scss'
 
