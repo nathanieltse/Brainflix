@@ -1,0 +1,22 @@
+@use '../../partials/colors' as *;
+@use '../../partials/variables' as *;
+@use '../../partials/typographys' as *;
+@use '../../partials/spacings' as *;
+@use '../../partials/mixins' as *;
+
+.video-list{
+    
+    @include desktop{
+        border-left: $divider;
+        padding-left: $regular-space;
+    }
+
+    &__title{
+        color: $primary-neutral-color;
+        margin: $max-space 0;
+
+        @include tablet {
+            font-size: $normal-body-font;
+        }
+    }
+}

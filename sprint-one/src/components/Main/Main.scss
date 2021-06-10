@@ -1,9 +1,30 @@
-@use '../../partials/mixins' as *;
+@use '../../partials/colors' as *;
+@use '../../partials/variables' as *;
+@use '../../partials/typographys' as *;
 @use '../../partials/spacings' as *;
+@use '../../partials/mixins' as *;
 
-.video{
-    
+.main{
+
     &__body{
         @include wrapper-sidespace;
+
+        @include desktop{
+            @include flex-row{
+                flex-wrap: wrap;
+            }
+        }
+
+        &-left{
+            @include desktop{
+                width: 70%;
+            }
+        }
+
+        &-right{
+            @include desktop{
+                width: 30%;
+            }
+        }
     }
 }

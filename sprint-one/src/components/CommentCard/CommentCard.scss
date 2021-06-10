@@ -8,8 +8,7 @@
 
     &__card{
         @include flex-row;
-        @include divider;
-        border-top:none;
+        border-bottom:$divider;
         margin-top: $medium-space;
         padding-bottom: $regular-space;
     }

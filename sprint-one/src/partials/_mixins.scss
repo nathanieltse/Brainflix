@@ -49,11 +49,6 @@
     padding: 0;
 }
 
-@mixin divider {
-    border-bottom: 0.0625rem solid $border-color;
-    border-top: 0.0625rem solid $border-color;
-}
-
 @mixin button {
     font-size: $mobile-label-font;
     font-weight: $weight-demi;

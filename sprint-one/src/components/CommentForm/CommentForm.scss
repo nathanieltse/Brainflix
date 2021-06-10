@@ -6,8 +6,7 @@
 
 .comment-form{
     @include flex-row;
-    @include divider;
-    border-top:none;
+    border-bottom:$divider;
 
     &__avatar-wrapper {
         @include avatar;

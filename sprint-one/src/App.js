@@ -12,9 +12,7 @@ function App() {
       <header className="header">
         <Nav/>
       </header>
-      <main className="main">
-        <Main/>
-      </main>
+      <Main/>
     </>
   );
 }

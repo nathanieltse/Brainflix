@@ -12,10 +12,9 @@ const SearchBar = () => {
 
     return (
         <form className="search-form" onSubmit={submitHandler}>
-            <label htmlFor="search"></label>
-            
             <div className="search-form__input-wrapper">
                 <img className="search-form__search-icon" src={searchIcon} alt="search icon"/>
+                <label className="search-form__label" htmlFor="search"></label>
                 <input className="search-form__input" type="text" name="search" placeholder="Search"/>
             </div>
            

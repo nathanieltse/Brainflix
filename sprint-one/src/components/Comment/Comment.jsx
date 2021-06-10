@@ -8,13 +8,13 @@ const Comment = () => {
         event.preventDefault()
     }
     return (
-        <>
+        <section className="comment">
             <h3 className="comment__title">3 Comments</h3>
             <CommentForm action={submitForm}/>
             <CommentCard/>
             <CommentCard/>
             <CommentCard/>
-        </>
+        </section>
     )
 }
 

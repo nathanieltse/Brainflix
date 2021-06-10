@@ -1,0 +1,36 @@
+@use '../../partials/colors' as *;
+@use '../../partials/variables' as *;
+@use '../../partials/typographys' as *;
+@use '../../partials/spacings' as *;
+@use '../../partials/mixins' as *;
+
+.video-list-card{
+    @include flex-row;
+    margin-bottom: $regular-space;
+
+    &__image{
+        width: 7.5rem;
+    }
+
+    &__text-wrapper{
+        margin-left: $small-space;
+    }
+
+    &__title,&__creator{
+        font-weight: $weight-demi;
+        font-size: $mobile-list-contact-font;
+        line-height: $mobile-list-conatct-line-height;
+
+        @include tablet{
+            font-size: $normal-list-contact-font;
+            line-height: $normal-list-conatct-line-height;
+        }
+    }
+
+
+    &__creator{
+        font-weight: $weight-regular;
+        margin-top: $small-space;
+    }
+
+}
