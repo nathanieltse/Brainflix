@@ -5,8 +5,13 @@ import profileImage from '../../../assets/images/Mohan-muruge.jpg'
 import './SearchBar.scss'
 
 const SearchBar = () => {
+
+    const submitHandler = (event) => {
+        event.preventDefault()
+    }
+
     return (
-        <form className="search-form">
+        <form className="search-form" onSubmit={submitHandler}>
             <label htmlFor="search"></label>
             
             <div className="search-form__input-wrapper">

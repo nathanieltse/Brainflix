@@ -1,5 +1,8 @@
-import Nav from './components/Nav/Nav';
-import './App.scss';
+import Nav from './components/Nav/Nav'
+import Main from './components/Main/Main'
+
+import './App.scss'
+
 
 
 
@@ -9,6 +12,9 @@ function App() {
       <header className="header">
         <Nav/>
       </header>
+      <main className="main">
+        <Main/>
+      </main>
     </>
   );
 }
