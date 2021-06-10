@@ -1,0 +1,9 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/spacings' as *;
+
+.video{
+    
+    &__body{
+        @include wrapper-sidespace;
+    }
+}

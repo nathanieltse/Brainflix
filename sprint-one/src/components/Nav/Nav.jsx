@@ -1,5 +1,4 @@
 import SearchBar from './SearchBar/SearchBar'
-
 import logo from '../../assets/logo/Logo-brainflix.svg'
 
 import './Nav.scss'

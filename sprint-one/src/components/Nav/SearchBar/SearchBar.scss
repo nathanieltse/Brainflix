@@ -62,7 +62,6 @@
     &__avatar-wrapper {
         @include avatar;
         margin-left: auto;
-        overflow: hidden;
 
         @include tablet {
             margin: 0;

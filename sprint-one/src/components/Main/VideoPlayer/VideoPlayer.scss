@@ -1,11 +1,12 @@
 @use '../../../partials/mixins' as *;
-@use '../../../partials/colors' as *;
-@use '../../../partials/spacings' as *;
 
 .video{
-    width: 100%;
-    background-color:black ;
-    
+
+    &__wrapper{
+        width: 100%;
+        background-color:black ;
+    }
+
     &__player{
         display: block;
         width: 100%;

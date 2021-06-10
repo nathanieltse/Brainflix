@@ -51,6 +51,7 @@
 
 @mixin divider {
     border-bottom: 0.0625rem solid $border-color;
+    border-top: 0.0625rem solid $border-color;
 }
 
 @mixin button {
@@ -79,15 +80,17 @@
 
 @mixin avatar {
     background-color: $primary-neutral-color;
+    overflow: hidden;
     border-radius: 50%;
-    max-width: 3rem;
+    min-width: 3rem;
+    width: 3rem;
     height: 3rem;
 }
 
 @mixin formfield {
     width: 100%;
     height: 3rem;
-    border: 0.0625rem solid $border-color;
+    border: 0.15rem solid $border-color;
     border-radius: 0.25rem;
     padding: 1rem;
     background-color: $secondary-neutral-color;
@@ -101,13 +104,13 @@
 
     &:focus {
         outline:none;
-        border-color: $secondary-color;
+        border-color: $primary-color;
     }
     
     @include tablet {
         width: 15rem;
         height: 3rem;
-        padding: 1rem;
+        padding: 0.8rem;
         font-size: $normal-body-font;
         line-height: $normal-body-line-height;
     }
