@@ -9,12 +9,13 @@ const Comment = (props) => {
     const submitForm = (event) =>{
         event.preventDefault()
     }
+
     return (
         <section className="comment">
             <h3 className="comment__title">3 Comments</h3>
             <CommentForm action={submitForm}/>
 
-            {props.videoData.comments.map(comment => {
+            {props.selected.comments.map(comment => {
                 return <CommentCard key={comment.id} commentData={comment} />
             })}
             

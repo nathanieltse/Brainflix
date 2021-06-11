@@ -19,7 +19,13 @@ const dateConvertor = (timestamp) => {
     let difference = today.getTime() - past.getTime()
     difference = difference/(24*60*60*1000)
     
-    return `${parseInt(difference)} days ago`
+    if (difference < 31){
+        return `${parseInt(difference)} days ago`
+    } else if (difference < 365){
+        return `${parseInt(difference/30)} months ago`
+    } else if (difference > 365){
+        return `${parseInt(difference/365)} years ago`
+    }
     
 }
 

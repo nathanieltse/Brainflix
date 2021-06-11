@@ -21,7 +21,6 @@ class Main extends Component {
     }
 
     render(){
-        // {this.removeSelected()}
         return (
             <main className="main">
                 <section className="main__hero">
@@ -32,10 +31,10 @@ class Main extends Component {
                 <section className="main__body">
                     <div className="main__body-left">
                         <VideoDetail 
-                            videoData={this.state.selected}
+                            selected={this.state.selected}
                         />
                         <Comment 
-                            videoData={this.state.selected}
+                            selected={this.state.selected}
                         />
                     </div>
                     <div className="main__body-right">

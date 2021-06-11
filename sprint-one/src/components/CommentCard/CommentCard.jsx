@@ -7,7 +7,7 @@ import './CommentCard.scss'
 const CommentCard = (props) => {
     return(
         <article className="comment__card">
-            <img className="comment__avatar"alt="user avatar"/>
+            <div className="comment__avatar"></div>
             <div className="comment__body">
                 <p className="comment__user">
                     {props.commentData.name}

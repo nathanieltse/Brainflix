@@ -41,6 +41,10 @@
 
     &__text{
         width: 100%;
-        margin-top:$min-space ;
+        margin-top:$min-space;
+
+        @include desktop{
+            margin-right: $medium-space;
+        }
     }
 }

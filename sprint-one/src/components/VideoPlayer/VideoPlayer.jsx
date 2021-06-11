@@ -5,7 +5,7 @@ import './VideoPlayer.scss'
 const VideoPlayer = (props) => {
     return (
         <div className="video-player__wrapper">
-            <video className="video-player__player" controls poster={props.videoData.image}>
+            <video className="video-player__player" poster={props.videoData.image} controls>
                 <source src={props.videoData.video} type="video/mp4"/>
             </video>
         </div>
