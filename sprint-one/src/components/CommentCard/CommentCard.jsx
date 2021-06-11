@@ -1,24 +1,24 @@
+import dateConvertor from '../../utils'
+
 import './CommentCard.scss'
 
-const CommentCard = () => {
+
+//comment block constructor
+const CommentCard = (props) => {
     return(
         <article className="comment__card">
             <img className="comment__avatar"alt="user avatar"/>
             <div className="comment__body">
                 <p className="comment__user">
-                    1222
+                    {props.commentData.name}
                 </p>
                 <p className="comment__date">
-                    32222
+                    {dateConvertor(props.commentData.timestamp)}
+                    
                 </p>
                 <p className="comment__text">
-                They BLEW the ROOF off at their
-last show, once everyone started
-figuring out they were going. This is
-still simply the greatest opening of a
-concert I have EVER witnessed.
+                    {props.commentData.comment}
                 </p>
-                
             </div>
         </article>
     )

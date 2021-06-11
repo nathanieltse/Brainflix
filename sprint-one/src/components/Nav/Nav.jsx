@@ -3,6 +3,7 @@ import logo from '../../assets/logo/Logo-brainflix.svg'
 
 import './Nav.scss'
 
+//nav bar element
 const Nav = () =>{
     return (
         <nav className="nav">

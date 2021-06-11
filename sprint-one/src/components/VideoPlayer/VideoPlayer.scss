@@ -8,11 +8,15 @@
 
     &__wrapper{
         width: 100%;
-        background-color:black ;
+        background-color:black;
+        
+        @include desktop{
+            padding:0 $max-space*3;
+        }
     }
 
     &__player{
-        display: block;
+        display:block;
         width: 100%;
 
         @include tablet {

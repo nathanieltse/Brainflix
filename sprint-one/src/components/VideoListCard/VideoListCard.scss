@@ -6,10 +6,20 @@
 
 .video-list-card{
     @include flex-row;
-    margin-bottom: $regular-space;
+    padding: $min-space;
+
+    &:hover{
+        cursor: pointer;
+        background-color: $secondary-color;
+        opacity: 0.85;
+        border-radius: 0.25rem;
+        transition: 0.5s ease;
+    }
 
     &__image{
+        display: block;
         width: 7.5rem;
+        height:4.7rem;
     }
 
     &__text-wrapper{

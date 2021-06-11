@@ -4,6 +4,8 @@ import profileImage from '../../assets/images/Mohan-muruge.jpg'
 
 import './SearchBar.scss'
 
+
+//search bar element
 const SearchBar = () => {
 
     const submitHandler = (event) => {

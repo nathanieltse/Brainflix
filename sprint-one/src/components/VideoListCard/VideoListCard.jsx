@@ -1,13 +1,19 @@
 import './VideoListCard.scss'
 
+
+//video listing constructor
 const VideoListCard = (props) =>{
     
     return (
-        <article className="video-list-card">
-            <img className="video-list-card__image" src="https://i.imgur.com/l2Xfgpl.jpg" alt="BMX Rampage: 2018 Highlights"/>
+        <article className="video-list-card" onClick={props.onClick}>
+            <img className="video-list-card__image" src={props.videoData.image} alt={props.videoData.title}/>
             <div className="video-list-card__text-wrapper">
-                <p className="video-list-card__title">Become A Travel Pro In One Easy Lesson</p>
-                <p className="video-list-card__creator">Red Cow</p>
+                <p className="video-list-card__title">
+                    {props.videoData.title}
+                </p>
+                <p className="video-list-card__creator">
+                    {props.videoData.channel}
+                </p>
             </div>
         </article>
     )

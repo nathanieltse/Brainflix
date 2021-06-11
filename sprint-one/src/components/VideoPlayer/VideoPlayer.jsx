@@ -1,11 +1,12 @@
 import './VideoPlayer.scss'
 
-const VideoPlayer = () => {
 
+//video hero player
+const VideoPlayer = (props) => {
     return (
         <div className="video-player__wrapper">
-            <video className="video-player__player" controls poster="https://i.imgur.com/l2Xfgpl.jpg">
-                <source src="https://project-2-api.herokuapp.com/stream" type="video/mp4"/>
+            <video className="video-player__player" controls poster={props.videoData.image}>
+                <source src={props.videoData.video} type="video/mp4"/>
             </video>
         </div>
     )
