@@ -2,17 +2,17 @@ import './VideoListCard.scss'
 
 
 //video listing constructor
-const VideoListCard = (props) =>{
+const VideoListCard = ({videoData, handleClick}) =>{
     
     return (
-        <article className="video-list-card" onClick={props.onClick}>
-            <img className="video-list-card__image" src={props.videoData.image} alt={props.videoData.title}/>
+        <article className="video-list-card" onClick={handleClick}>
+            <img className="video-list-card__image" src={videoData.image} alt={videoData.title}/>
             <div className="video-list-card__text-wrapper">
                 <p className="video-list-card__title">
-                    {props.videoData.title}
+                    {videoData.title}
                 </p>
                 <p className="video-list-card__creator">
-                    {props.videoData.channel}
+                    {videoData.channel}
                 </p>
             </div>
         </article>

@@ -4,18 +4,17 @@ import './VideoList.scss'
 
 
 //listing all video
-const VideoList= (props) => {
+const VideoList= ({videoData, selected, handleClick}) => {
 
     return (
         <section className="video-list">
             <h2 className="video-list__title">NEXT VIDEO</h2>
-            {props.videoData.map(video => {
-                if(video !== props.selected){
+            {videoData.map(video => {
+                if(video !== selected){
                     return <VideoListCard 
                                 key={video.id} 
                                 videoData={video}
-                                onClick={()=> props.onClick(video.id)}
-                            />
+                                handleClick={()=> handleClick(video.id)}/>
                 } else {
                     return null
                 }

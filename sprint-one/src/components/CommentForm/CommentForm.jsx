@@ -4,9 +4,9 @@ import './CommentForm.scss'
 
 
 //comment form 
-const CommentForm = (props) => {
+const CommentForm = ({handleSubmit}) => {
     return (
-        <form className="comment-form" onSubmit={props.action}>
+        <form className="comment-form" onSubmit={handleSubmit}>
             <div className="comment-form__avatar-wrapper">
                 <img className="comment-form__avatar" src={profileImage} alt="Mogan muruge"/>
             </div>

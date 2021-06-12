@@ -8,12 +8,12 @@ import './SearchBar.scss'
 //search bar element
 const SearchBar = () => {
 
-    const submitHandler = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault()
     }
 
     return (
-        <form className="search-form" onSubmit={submitHandler}>
+        <form className="search-form" onSubmit={handleSubmit}>
             <div className="search-form__input-wrapper">
                 <img className="search-form__search-icon" src={searchIcon} alt="search icon"/>
                 <label className="search-form__label" htmlFor="search"></label>
