@@ -2,6 +2,7 @@
 
 # dependencies
 sprint-one/node_modules
+sprint-two/node_modules
 /.pnp
 .pnp.js
 
