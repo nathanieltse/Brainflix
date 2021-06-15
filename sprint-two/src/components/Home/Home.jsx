@@ -5,24 +5,25 @@ import Comment from '../Comment/Comment'
 import VideoList from '../VideoList/VideoList'
 import Dataset from '../../data/video-details.json'
 
-import './Main.scss'
+import './Home.scss'
 
 
 //main section of page
-class Main extends Component {
+class Home extends Component {
     state = {
         videoData: Dataset,
         selected: Dataset[0]
     }
 
-    handleClick = (id) => {
-        const selected = this.state.videoData.find(video => video.id === id)
-        this.setState({selected:selected})
+    handleClick = (routeProps) => {
+        console.log(routeProps)
+        // const selected = this.state.videoData.find(video => video.id === id)
+        // this.setState({selected:selected})
     }
 
     render(){
         return (
-            <main className="main">
+            <>
                 <section className="main__hero">
                     <VideoPlayer 
                         videoData={this.state.selected}/>
@@ -37,13 +38,12 @@ class Main extends Component {
                     <div className="main__body-right">
                         <VideoList
                             videoData={this.state.videoData}
-                            selected={this.state.selected}
-                            handleClick={this.handleClick}/>
+                            selected={this.state.selected}/>
                     </div>
                 </section>
-            </main>
+            </>
         )
     }
 }
 
-export default Main
+export default Home

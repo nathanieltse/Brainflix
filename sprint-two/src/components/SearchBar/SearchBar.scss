@@ -42,12 +42,12 @@
         }
     }
 
-    &__submit-icon{
+    &__user-icon{
         margin-right: $min-space;
         vertical-align: sub;
     }
     
-    &__submit{
+    &__link-button{
         @include button;
         margin: 0 $small-space $small-space 0;
         width: auto;

@@ -5,9 +5,7 @@
 @use '../../partials/mixins' as *;
 
 .nav{
-    @include flex-column{
-        justify-content: center;
-    }
+    @include flex-column;
     @include wrapper-sidespace;
 
     @include tablet {
@@ -17,8 +15,9 @@
         padding:1rem 0;
     }
 
-    &__logo {
+    &__link {
         margin: $small-space;
+        text-align: center;
         
         @include tablet {
             margin: auto 0;

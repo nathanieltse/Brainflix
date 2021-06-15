@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 import searchIcon from "../../assets/icons/Icon-search.svg"
 import uploadIcon from "../../assets/icons/Icon-upload.svg"
 import profileImage from '../../assets/images/Mohan-muruge.jpg'
@@ -19,11 +21,12 @@ const SearchBar = () => {
                 <label className="search-form__label" htmlFor="search"></label>
                 <input className="search-form__input" type="text" name="search" placeholder="Search"/>
             </div>
-           
-            <button className="search-form__submit" type="submit">
-                <img className="search-form__submit-icon" src={uploadIcon} alt="upload icon"/>
-                UPLOAD
-            </button>
+            <Link className="search-form__link" to="/upload">
+                <button className="search-form__link-button" type="submit">
+                    <img className="search-form__user-icon" src={uploadIcon} alt="upload icon"/>
+                    UPLOAD
+                </button>
+            </Link>
 
             <div className="search-form__avatar-wrapper">
                 <img className="search-form__avatar" src={profileImage} alt="Mogan muruge"/>
