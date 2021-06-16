@@ -134,9 +134,10 @@
 
 .loading{
 
-    &::after{
+    &::before{
         content: "";
-        background-color:$primary-neutral-color;
+        background-color:$primary-white;
+        color: $primary-color;
         opacity: 0.6;
         position: absolute;
         z-index: 1;
@@ -146,7 +147,7 @@
         animation: loading 1s;
     }
 
-    &::before{
+    &::after{
         content: "Uploading...";
         color: $primary-color;
         font-size: $normal-header-font;

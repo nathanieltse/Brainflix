@@ -5,7 +5,7 @@ import './VideoList.scss'
 
 //listing all video
 const VideoList= ({videoData, selected}) => {
-
+    
     return (
         <section className="video-list">
             <h2 className="video-list__title">NEXT VIDEO</h2>

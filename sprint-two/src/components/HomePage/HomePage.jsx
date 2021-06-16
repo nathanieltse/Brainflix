@@ -14,13 +14,15 @@ class HomePage extends Component {
         videoData: Dataset,
         selected: Dataset[0]
     }
-
-    handleClick = (routeProps) => {
-        console.log(routeProps)
-        // const selected = this.state.videoData.find(video => video.id === id)
-        // this.setState({selected:selected})
+    
+    componentDidUpdate(prevProps, prevState){
+        if(this.props.match.params.id !== this.state.selected.id){
+            const selected = this.state.videoData.find(video => video.id === this.props.match.params.id)
+            console.log(prevState)
+            return this.setState({selected:selected})
+        }
     }
-
+    
     render(){
         return (
             <>
@@ -42,6 +44,7 @@ class HomePage extends Component {
                     </div>
                 </section>
             </>
+            
         )
     }
 }
