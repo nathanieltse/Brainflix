@@ -11,7 +11,7 @@ const CommentForm = ({handleSubmit}) => {
                 <img className="comment-form__avatar" src={profileImage} alt="Mogan muruge"/>
             </div>
             <div className="comment-form__body">
-                <label className="comment-form__text" htmlFor="comment">JOIN THE CONVERSATION</label>
+                <label className="comment-form__label" htmlFor="comment">JOIN THE CONVERSATION</label>
                 <textarea row="3" className="comment-form__input" name="comment" placeholder="Write comment here"/>
                 <button className="comment-form__submit">COMMENT</button>
             </div>

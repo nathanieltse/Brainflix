@@ -5,11 +5,11 @@ import Comment from '../Comment/Comment'
 import VideoList from '../VideoList/VideoList'
 import Dataset from '../../data/video-details.json'
 
-import './Home.scss'
+import './HomePage.scss'
 
 
 //main section of page
-class Home extends Component {
+class HomePage extends Component {
     state = {
         videoData: Dataset,
         selected: Dataset[0]
@@ -46,4 +46,4 @@ class Home extends Component {
     }
 }
 
-export default Home
+export default HomePage
