@@ -9,6 +9,7 @@ const Comment = ({selected}) => {
     const handleSubmit = (event) =>{
         event.preventDefault()
     }
+    console.log(selected.comments)
 
     return (
         <section className="comment">

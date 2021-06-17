@@ -3,7 +3,6 @@ import './VideoPlayer.scss'
 
 //video hero player
 const VideoPlayer = ({videoData}) => {
-    
     return (
         <div className="video-player__wrapper">
             <video className="video-player__player" poster={videoData.image} controls>

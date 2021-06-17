@@ -10,7 +10,7 @@ const VideoList= ({videoData, selected}) => {
         <section className="video-list">
             <h2 className="video-list__title">NEXT VIDEO</h2>
             {videoData.map(video => {
-                if(video !== selected){
+                if(video.id !== selected.id){
                     return <Link className="video-list__link" to={`/${video.id}`} key={video.id} >
                                 <VideoListCard videoData={video}/>
                             </Link>

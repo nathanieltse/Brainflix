@@ -1,5 +1,5 @@
 //convert timestamp to date
-const dateConvertor = (timestamp) => {
+export const dateConvertor = (timestamp) => {
 
     const fullDate = new Date(timestamp)
     const year = fullDate.getFullYear()
@@ -28,5 +28,8 @@ const dateConvertor = (timestamp) => {
     }
     
 }
+
+export const api_url = "https://project-2-api.herokuapp.com"
+export const api_key = "?api_key=aa05f080-f144-46ca-9d40-4da1dca490e0"
 
 export default dateConvertor
