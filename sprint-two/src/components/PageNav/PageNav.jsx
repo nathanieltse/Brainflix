@@ -3,10 +3,10 @@ import {Link} from 'react-router-dom'
 
 import logo from '../../assets/logo/Logo-brainflix.svg'
 
-import './Nav.scss'
+import './PageNav.scss'
 
 //nav bar element
-const Nav = () =>{
+const PageNav = () =>{
     return (
         <nav className="nav">
             <Link className="nav__link" to="/">
@@ -17,4 +17,4 @@ const Nav = () =>{
     )
 }
 
-export default Nav
+export default PageNav

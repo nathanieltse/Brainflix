@@ -9,21 +9,19 @@ const Comment = ({selected}) => {
     const handleSubmit = (event) =>{
         event.preventDefault()
     }
-    console.log(selected.comments)
-
+    console.log(selected)
     return (
         <section className="comment">
-            <h3 className="comment__title">3 Comments</h3>
+            <h3 className="comment__title">3 selected</h3>
             <CommentForm 
                 handleSubmit={handleSubmit}/>
-
-            {selected.comments.map(comment => {
+            {selected.map(comment => {
                 return <CommentCard 
                             key={comment.id} 
                             commentData={comment} />
-            })}
-            
+            })} 
         </section>
+        
     )
 }
 

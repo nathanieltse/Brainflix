@@ -1,4 +1,4 @@
-import Nav from './components/Nav/Nav'
+import PageNav from './components/PageNav/PageNav'
 import HomePage from './components/HomePage/HomePage'
 import UploadPage from './components/UploadPage/UploadPage'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <header className="header">
-        <Nav/>
+        <PageNav/>
       </header>
       <main className="main">
         <Switch>
