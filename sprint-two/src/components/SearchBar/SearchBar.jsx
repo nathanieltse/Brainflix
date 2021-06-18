@@ -21,11 +21,9 @@ const SearchBar = () => {
                 <label className="search-form__label" htmlFor="search"></label>
                 <input className="search-form__input" type="text" name="search" placeholder="Search"/>
             </div>
-            <Link className="search-form__link" to="/upload">
-                <button className="search-form__link-button" type="submit">
-                    <img className="search-form__user-icon" src={uploadIcon} alt="upload icon"/>
+            <Link className="search-form__link-button" to="/upload">
+                    <img className="search-form__upload-icon" src={uploadIcon} alt="upload icon"/>
                     UPLOAD
-                </button>
             </Link>
 
             <div className="search-form__avatar-wrapper">

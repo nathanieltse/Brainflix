@@ -9,7 +9,7 @@ const Comment = ({selected}) => {
     const handleSubmit = (event) =>{
         event.preventDefault()
     }
-    console.log(selected)
+    
     return (
         <section className="comment">
             <h3 className="comment__title">3 selected</h3>

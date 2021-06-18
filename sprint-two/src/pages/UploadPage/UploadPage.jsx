@@ -1,19 +1,25 @@
+import { Component } from 'react'
 import {Link} from 'react-router-dom'
 import thumbnail from '../../assets/images/Upload-video-preview.jpg'
 import './UploadPage.scss'
 
-const UploadPage = (props) => {
-    const handleSubmit = (e) =>{
+class UploadPage extends Component {
+    state={
+        submit:false
+    }
+
+    handleSubmit = (e) =>{
         e.preventDefault()
-        document.querySelector(".upload").classList.add("loading")
+        this.setState({submit:true})
         setTimeout(()=> {
             alert("Uploaded!")
-            props.history.push('/')
+            this.props.history.push('/')
         },3000)  
     }
 
+    render(){
         return(
-            <section className="upload" onSubmit={handleSubmit}>
+            <section className={"upload " + (this.state.submit ? "loading" : "") } onSubmit={this.handleSubmit}>
                 <h1 className="upload__title">Upload Video</h1>
                     <form className="upload__form">
                         <div className="upload__form-left">
@@ -33,6 +39,7 @@ const UploadPage = (props) => {
                     </form>
             </section>
         )
+    }
     
 }
 

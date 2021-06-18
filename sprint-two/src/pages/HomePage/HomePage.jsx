@@ -25,12 +25,10 @@ class HomePage extends Component {
                 let selectedId = null
                 this.props.match.params.id ? selectedId = this.props.match.params.id  : selectedId = res.data[0].id
                 this.setState({videoData:res.data})
-                //call to populate video detail
+                //call to populate selected video detail
                 return axios.get(`${api_url}/videos/${selectedId}${api_key}`)
             })
-            .then(res => {
-                this.setState({selected:res.data})
-            }) 
+            .then(res => this.setState({selected:res.data})) 
             .catch(err => console.log(err))
         
            
@@ -43,18 +41,13 @@ class HomePage extends Component {
             this.props.match.params.id ? selectedId = this.props.match.params.id  : selectedId = this.state.videoData[0].id
             axios
                 .get(`${api_url}/videos/${selectedId}${api_key}`)
-                .then(res => {
-                    this.setState({selected:res.data})
-                })
-                .catch(err => {
-                    console.log(err)
-                })
+                .then(res => this.setState({selected:res.data}))
+                .catch(err => console.log(err))
         }
     }
     
     
     render(){ 
-        console.log(this.state)
         return (
             this.state.selected ?
             <>

@@ -16,9 +16,8 @@
     }
 
     &__link {
-        height: 1.5rem;
-        margin: $small-space;
-        text-align: center;
+        margin: $small-space auto;
+        
         
         @include tablet {
             margin: auto 0;

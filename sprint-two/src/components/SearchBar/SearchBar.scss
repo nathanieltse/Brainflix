@@ -42,13 +42,18 @@
         }
     }
 
-    &__user-icon{
+    &__upload-icon{
         margin-right: $min-space;
-        vertical-align: sub;
     }
     
-    &__link{
+    &__link-button{
         @include button;
+        @include flex-row{
+            justify-content: center;
+            align-items: center;
+        }
+        text-decoration: none;
+        
         margin: 0 $small-space $small-space 0;
         width: auto;
         flex-grow: 1;
@@ -57,10 +62,6 @@
             flex-grow: 0;
             margin:0 $regular-space;
         }
-    }
-
-    &__link-button{
-        @include button;
     }
 
     &__avatar-wrapper {
