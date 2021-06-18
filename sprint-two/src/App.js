@@ -1,6 +1,6 @@
 import PageNav from './components/PageNav/PageNav'
-import HomePage from './components/HomePage/HomePage'
-import UploadPage from './components/UploadPage/UploadPage'
+import HomePage from './pages/HomePage/HomePage'
+import UploadPage from './pages/UploadPage/UploadPage'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 import './App.scss'

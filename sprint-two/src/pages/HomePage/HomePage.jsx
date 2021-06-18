@@ -1,8 +1,8 @@
 import {Component} from 'react'
-import VideoPlayer from '../VideoPlayer/VideoPlayer'
-import VideoDetail from '../VideoDetail/VideoDetail'
-import Comment from '../Comment/Comment'
-import VideoList from '../VideoList/VideoList'
+import VideoPlayer from '../../components/VideoPlayer/VideoPlayer'
+import VideoList from '../../components/VideoList/VideoList'
+import VideoDetail from '../../components/VideoDetail/VideoDetail'
+import Comment from '../../components/Comment/Comment'
 import { api_url, api_key } from '../../utils'
 import axios from 'axios'
 
@@ -21,29 +21,18 @@ class HomePage extends Component {
         axios
             .get(`${api_url}/videos${api_key}`)
             .then(res => {
-                //if no id in path default to the first video
+                //default to the first video if no id in path 
                 let selectedId = null
                 this.props.match.params.id ? selectedId = this.props.match.params.id  : selectedId = res.data[0].id
-                const selectedVideo = res.data.find(video => video.id === selectedId)
-                this.setState({videoData:res.data, selected:selectedVideo})
+                this.setState({videoData:res.data})
+                //call to populate video detail
+                return axios.get(`${api_url}/videos/${selectedId}${api_key}`)
             })
-            .catch(err => {
-                console.log(err)
-            })
-        //call to populate video detail
-        //default to first video if no id in path
-        // if (this.state.videoData.length !== 0){
-        //     let selectedId = null
-        //     this.props.match.params.id ? selectedId = this.props.match.params.id  : selectedId = this.state.videoData[0].id
-        //     axios
-        //         .get(`${api_url}/videos/${selectedId}${api_key}`)
-        //         .then(res => {
-        //             this.setState({selected:res.data})
-        //         })
-        //         .catch(err => {
-        //             console.log(err)
-        //         })  
-        // }
+            .then(res => {
+                this.setState({selected:res.data})
+            }) 
+            .catch(err => console.log(err))
+        
            
     }
 
@@ -65,6 +54,7 @@ class HomePage extends Component {
     
     
     render(){ 
+        console.log(this.state)
         return (
             this.state.selected ?
             <>
@@ -74,11 +64,11 @@ class HomePage extends Component {
                 </section>
                 <section className="main__body">
                     <div className="main__body-left">
-                        {/* <VideoDetail 
-                            selected={this.state.selected}/> */}
+                    <VideoDetail 
+                            selected={this.state.selected}/> 
 
-                        {/* <Comment 
-                            selected={this.state.selected.comments}/>  */}
+                    <Comment 
+                            selected={this.state.selected.comments}/>
                     </div>
                     <div className="main__body-right">
                         <VideoList
