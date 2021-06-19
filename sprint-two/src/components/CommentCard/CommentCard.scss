@@ -47,4 +47,9 @@
             margin-right: $medium-space;
         }
     }
+
+    &__delete{
+        margin-top:$min-space;
+        cursor: pointer;
+    }
 }

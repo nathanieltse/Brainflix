@@ -29,9 +29,7 @@ class HomePage extends Component {
                 return axios.get(`${api_url}/videos/${selectedId}${api_key}`)
             })
             .then(res => this.setState({selected:res.data})) 
-            .catch(err => console.log(err))
-        
-           
+            .catch(err => console.log(err))   
     }
 
     componentDidUpdate(prevState){
@@ -44,6 +42,32 @@ class HomePage extends Component {
                 .then(res => this.setState({selected:res.data}))
                 .catch(err => console.log(err))
         }
+    }
+
+    handleSubmit = (event) =>{
+        event.preventDefault()
+        const newText = event.target.comment.value
+        const userName = "BrainStation man"
+        axios
+            .post(`${api_url}/videos/${this.state.selected.id}/comments${api_key}`,{
+                "name":userName,
+                "comment":newText,
+            })
+            .then(res => {
+                this.setState({selected:{...this.state.selected, comments:[res.data,...this.state.selected.comments]}})
+            })
+            .catch(err => console.log(err))
+        event.target.reset()
+    }
+
+    handleDelete = (id) =>{
+        axios
+            .delete(`${api_url}/videos/${this.state.selected.id}/comments/${id}${api_key}`)
+            .then(res => {
+                const newComments = this.state.selected.comments.filter(comment => comment.id !== res.data.id)
+                this.setState({selected:{...this.state.selected, comments:newComments}})
+            })
+            .catch(err => console.log(err))
     }
     
     
@@ -61,7 +85,9 @@ class HomePage extends Component {
                             selected={this.state.selected}/> 
 
                     <Comment 
-                            selected={this.state.selected.comments}/>
+                            selected={this.state.selected}
+                            handleSubmit={this.handleSubmit}
+                            handleDelete={this.handleDelete}/>
                     </div>
                     <div className="main__body-right">
                         <VideoList
