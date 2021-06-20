@@ -69,8 +69,7 @@ class HomePage extends Component {
             })
             .catch(err => console.log(err))
     }
-    
-    
+
     render(){ 
         return (
             this.state.selected ?
@@ -100,7 +99,6 @@ class HomePage extends Component {
             <p>Loading....</p>
             
         )
-        
     }
 }
 
