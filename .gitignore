@@ -4,6 +4,7 @@
 sprint-one/node_modules
 sprint-two/node_modules
 sprint-three/client/node_modules
+sprint-three/server/node_modules
 /.pnp
 .pnp.js
 
