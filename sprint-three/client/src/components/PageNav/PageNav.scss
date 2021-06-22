@@ -1,0 +1,28 @@
+@use '../../partials/colors' as *;
+@use '../../partials/variables' as *;
+@use '../../partials/typographys' as *;
+@use '../../partials/spacings' as *;
+@use '../../partials/mixins' as *;
+
+.nav{
+    @include flex-column;
+    @include wrapper-sidespace;
+
+    @include tablet {
+        @include flex-row {
+            justify-content: space-between;
+        }
+        padding:1rem 0;
+    }
+
+    &__link {
+        margin: $small-space auto;
+        
+        
+        @include tablet {
+            margin: auto 0;
+        }
+    
+    }
+
+}
