@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import { v4 as uuid} from 'uuid'
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer'
 import VideoList from '../../components/VideoList/VideoList'
 import VideoDetail from '../../components/VideoDetail/VideoDetail'
@@ -19,14 +20,14 @@ class HomePage extends Component {
     componentDidMount() {
         //call to populate video list
         axios
-            .get(`${api_url}/videos${api_key}`)
+            .get(`/videos`)
             .then(res => {
                 //default to the first video if no id in path 
                 let selectedId = null
                 this.props.match.params.id ? selectedId = this.props.match.params.id  : selectedId = res.data[0].id
                 this.setState({videoData:res.data})
                 //call to populate selected video detail
-                return axios.get(`${api_url}/videos/${selectedId}${api_key}`)
+                return axios.get(`/videos/${selectedId}`)
             })
             .then(res => this.setState({selected:res.data})) 
             .catch(err => console.log(err))   
@@ -38,7 +39,7 @@ class HomePage extends Component {
             let selectedId = null
             this.props.match.params.id ? selectedId = this.props.match.params.id  : selectedId = this.state.videoData[0].id
             axios
-                .get(`${api_url}/videos/${selectedId}${api_key}`)
+                .get(`/videos/${selectedId}`)
                 .then(res => this.setState({selected:res.data}))
                 .catch(err => console.log(err))
         }
@@ -49,9 +50,11 @@ class HomePage extends Component {
         const newText = event.target.comment.value
         const userName = "BrainStation man"
         axios
-            .post(`${api_url}/videos/${this.state.selected.id}/comments${api_key}`,{
+            .post(`/videos/${this.state.selected.id}/comments`,{
                 "name":userName,
+                "id":uuid(),
                 "comment":newText,
+                "timestamp":Date.now()
             })
             .then(res => {
                 this.setState({selected:{...this.state.selected, comments:[res.data,...this.state.selected.comments]}})
@@ -62,7 +65,7 @@ class HomePage extends Component {
 
     handleDelete = (id) =>{
         axios
-            .delete(`${api_url}/videos/${this.state.selected.id}/comments/${id}${api_key}`)
+            .delete(`/videos/${this.state.selected.id}/comments/${id}`)
             .then(res => {
                 const newComments = this.state.selected.comments.filter(comment => comment.id !== res.data.id)
                 this.setState({selected:{...this.state.selected, comments:newComments}})
