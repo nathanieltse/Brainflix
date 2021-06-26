@@ -1,6 +1,7 @@
 const router = require('express').Router()
-const videoJSON = require('../data/video-details.json')
 const fs = require('fs')
+const { v4: uuid } = require('uuid');
+const videoJSON = require('../data/video-details.json')
 
 let videoData = videoJSON
 
@@ -14,7 +15,6 @@ router
                 "image": data.image
             }
         })
-        
         res.status(200).send(apiRes)
     })
 
@@ -26,7 +26,7 @@ router
 
     .post("/videos", (req,res) => {
         const newData = {
-            "id":req.body.id,
+            "id":uuid(),
             "title": req.body.title,
             "channel": req.body.channel,
             "image": req.body.image,
@@ -39,7 +39,7 @@ router
             "comments": []
         }
         videoData.push(newData)
-        fs.writeFile(__dirname + '/../data/video-details.json', JSON.stringify(data, null, 2), (err) => {
+        fs.writeFile(__dirname + '/../data/video-details.json', JSON.stringify(videoData, null, 2), (err) => {
             if(err){
                 console.log(err)
             } else {

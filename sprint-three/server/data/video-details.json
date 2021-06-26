@@ -325,7 +325,22 @@
     "duration": "4:01",
     "video": "https://project-2-api.herokuapp.com/stream",
     "timestamp": 1624733344847,
-    "comments": []
+    "comments": [
+      {
+        "name": "BrainStation man",
+        "comment": "dsadsa",
+        "id": "702fa4a9-bb8b-4e50-9fd1-70359609bd40",
+        "likes": 0,
+        "timestamp": 1624734388433
+      },
+      {
+        "name": "BrainStation man",
+        "comment": "wq123",
+        "id": "b96b473f-ed1d-47b7-a5cf-946384971cf0",
+        "likes": 0,
+        "timestamp": 1624734800603
+      }
+    ]
   },
   {
     "id": "617d444c-59fb-493c-b974-35b3553c39d6",
@@ -338,6 +353,19 @@
     "duration": "4:01",
     "video": "https://project-2-api.herokuapp.com/stream",
     "timestamp": 1624733406034,
+    "comments": []
+  },
+  {
+    "id": "e7bc9af9-cc0d-4331-8378-5f7135262b4c",
+    "title": "test",
+    "channel": "random channel",
+    "image": "/static/media/Upload-video-preview.313a407c.jpg",
+    "description": "test",
+    "views": 0,
+    "likes": 0,
+    "duration": "4:01",
+    "video": "https://project-2-api.herokuapp.com/stream",
+    "timestamp": 1624735352461,
     "comments": []
   }
 ]

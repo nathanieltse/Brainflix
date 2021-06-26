@@ -1,6 +1,12 @@
 const router = require("express").Router()
-const videoData = require('../data/video-details.json')
+const fs = require('fs')
+const videoJSON = require('../data/video-details.json')
 
+let videoData = videoJSON
+
+const fileRewrite = selectedVideo => {
+
+}
 router
     .post("/videos/:id/comments", (req, res) => {
         const videoId = req.params.id
@@ -13,7 +19,20 @@ router
             "timestamp": req.body.timestamp
         }
         selectedVideo.comments.push(newComment)
-        res.status(200).send(newComment)
+        //find the video in the array and reassign old data to new data with new comment
+        videoData.map(data => {
+            if (data.id === selectedVideo.id){
+                return data = selectedVideo
+            }
+        })
+        fs.writeFile(__dirname + '/../data/video-details.json', JSON.stringify(videoData, null, 2), (err) => {
+            if (err){
+                console.log(err)
+            } else {
+                res.status(200).send(newComment)
+            }
+        })
+        
     })
 
     .delete("/videos/:videoId/comments/:commentId", (req, res) => {
@@ -23,7 +42,19 @@ router
         const selectedComment = selectedVideo.comments.find(comment => comment.id === commentId)
         const commentIndex = selectedVideo.comments.indexOf(selectedComment)
         selectedVideo.comments.splice(commentIndex,1)
-        res.status(200).send(selectedComment)
+        //find the video in the array and reassign old data to new data without deleted comment
+        videoData.map(data => {
+            if (data.id === selectedVideo.id){
+                return data = selectedVideo
+            }
+        })
+        fs.writeFile(__dirname + '/../data/video-details.json', JSON.stringify(videoData, null, 2), (err) => {
+            if (err){
+                console.log(err)
+            } else {
+                res.status(200).send(selectedComment)
+            }
+        })
     })
 
 module.exports = router

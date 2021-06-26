@@ -1,7 +1,6 @@
 import { Component } from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
-import {v4 as uuid} from 'uuid'
 import thumbnail from '../../assets/images/Upload-video-preview.jpg'
 import './UploadPage.scss'
 
@@ -15,7 +14,6 @@ class UploadPage extends Component {
         this.setState({submit:true})
         axios
             .post('/videos',{
-                "id":uuid(),
                 "title": e.target.title.value,
                 "channel": "random channel",
                 "image": thumbnail,

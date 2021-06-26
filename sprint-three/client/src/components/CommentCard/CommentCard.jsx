@@ -21,7 +21,7 @@ const CommentCard = ({commentData, handleDelete}) => {
                 <p className="comment__text">
                     {commentData.comment}
                 </p>
-                <img className="comment__delete" src={deleteIcon} onClick={()=>handleDelete(commentData.id)}/>
+                <img className="comment__delete" src={deleteIcon} alt="delete icon" onClick={()=>handleDelete(commentData.id)}/>
             </div>
         </article>
     )
