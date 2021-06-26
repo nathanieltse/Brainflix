@@ -315,57 +315,31 @@
     ]
   },
   {
-    "id": "99dc4ab4-7825-4424-950e-c7789e99e42f",
-    "title": "dsa",
+    "id": "117e300b-4cff-4c95-8377-5a79bb223bdf",
+    "title": "testing",
     "channel": "random channel",
     "image": "/static/media/Upload-video-preview.313a407c.jpg",
-    "description": "dsa",
+    "description": "testing",
     "views": 0,
     "likes": 0,
     "duration": "4:01",
     "video": "https://project-2-api.herokuapp.com/stream",
-    "timestamp": 1624733344847,
+    "timestamp": 1624735503423,
     "comments": [
       {
         "name": "BrainStation man",
-        "comment": "dsadsa",
-        "id": "702fa4a9-bb8b-4e50-9fd1-70359609bd40",
+        "comment": "test ",
+        "id": "c717eee2-a830-4c0c-962a-dd996d425da8",
         "likes": 0,
-        "timestamp": 1624734388433
+        "timestamp": 1624736421296
       },
       {
         "name": "BrainStation man",
-        "comment": "wq123",
-        "id": "b96b473f-ed1d-47b7-a5cf-946384971cf0",
+        "comment": "123",
+        "id": "71b8c207-c9da-4a2c-89c9-865b99d6936f",
         "likes": 0,
-        "timestamp": 1624734800603
+        "timestamp": 1624736428479
       }
     ]
-  },
-  {
-    "id": "617d444c-59fb-493c-b974-35b3553c39d6",
-    "title": "ewq",
-    "channel": "random channel",
-    "image": "/static/media/Upload-video-preview.313a407c.jpg",
-    "description": "ewq",
-    "views": 0,
-    "likes": 0,
-    "duration": "4:01",
-    "video": "https://project-2-api.herokuapp.com/stream",
-    "timestamp": 1624733406034,
-    "comments": []
-  },
-  {
-    "id": "e7bc9af9-cc0d-4331-8378-5f7135262b4c",
-    "title": "test",
-    "channel": "random channel",
-    "image": "/static/media/Upload-video-preview.313a407c.jpg",
-    "description": "test",
-    "views": 0,
-    "likes": 0,
-    "duration": "4:01",
-    "video": "https://project-2-api.herokuapp.com/stream",
-    "timestamp": 1624735352461,
-    "comments": []
   }
 ]
