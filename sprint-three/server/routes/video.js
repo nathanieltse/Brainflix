@@ -1,5 +1,8 @@
 const router = require('express').Router()
-const videoData = require('../data/video-details.json')
+const videoJSON = require('../data/video-details.json')
+const fs = require('fs')
+
+let videoData = videoJSON
 
 router
     .get("/videos",(_req,res) => {
@@ -11,6 +14,7 @@ router
                 "image": data.image
             }
         })
+        
         res.status(200).send(apiRes)
     })
 
@@ -35,7 +39,13 @@ router
             "comments": []
         }
         videoData.push(newData)
-        res.status(200).send("suceess!")
+        fs.writeFile(__dirname + '/../data/video-details.json', JSON.stringify(data, null, 2), (err) => {
+            if(err){
+                console.log(err)
+            } else {
+                res.status(200).send("suceess!")
+            }
+        })
     })
 
 module.exports = router

@@ -20,9 +20,10 @@ router
         const videoId = req.params.videoId
         const commentId = req.params.commentId
         const selectedVideo = videoData.find(video => video.id === videoId)
-        const newComments = selectedVideo.comments.filter(comment => comment.id !== commentId)
-
-        res.status(200).send(newComments)
+        const selectedComment = selectedVideo.comments.find(comment => comment.id === commentId)
+        const commentIndex = selectedVideo.comments.indexOf(selectedComment)
+        selectedVideo.comments.splice(commentIndex,1)
+        res.status(200).send(selectedComment)
     })
 
 module.exports = router

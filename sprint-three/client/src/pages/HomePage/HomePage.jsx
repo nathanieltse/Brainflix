@@ -4,7 +4,6 @@ import VideoPlayer from '../../components/VideoPlayer/VideoPlayer'
 import VideoList from '../../components/VideoList/VideoList'
 import VideoDetail from '../../components/VideoDetail/VideoDetail'
 import Comment from '../../components/Comment/Comment'
-import { api_url, api_key } from '../../utils'
 import axios from 'axios'
 
 import './HomePage.scss'
