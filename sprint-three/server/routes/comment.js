@@ -4,9 +4,6 @@ const videoJSON = require('../data/video-details.json')
 
 let videoData = videoJSON
 
-const fileRewrite = selectedVideo => {
-
-}
 router
     .post("/videos/:id/comments", (req, res) => {
         const videoId = req.params.id

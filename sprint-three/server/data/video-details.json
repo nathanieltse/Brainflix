@@ -313,33 +313,5 @@
         "timestamp": 1542262984046
       }
     ]
-  },
-  {
-    "id": "117e300b-4cff-4c95-8377-5a79bb223bdf",
-    "title": "testing",
-    "channel": "random channel",
-    "image": "/static/media/Upload-video-preview.313a407c.jpg",
-    "description": "testing",
-    "views": 0,
-    "likes": 0,
-    "duration": "4:01",
-    "video": "https://project-2-api.herokuapp.com/stream",
-    "timestamp": 1624735503423,
-    "comments": [
-      {
-        "name": "BrainStation man",
-        "comment": "test ",
-        "id": "c717eee2-a830-4c0c-962a-dd996d425da8",
-        "likes": 0,
-        "timestamp": 1624736421296
-      },
-      {
-        "name": "BrainStation man",
-        "comment": "123",
-        "id": "71b8c207-c9da-4a2c-89c9-865b99d6936f",
-        "likes": 0,
-        "timestamp": 1624736428479
-      }
-    ]
   }
 ]
